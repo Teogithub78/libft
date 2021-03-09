@@ -6,13 +6,13 @@
 /*   By: tthibaut <tthibaut@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/26 11:33:39 by tthibaut          #+#    #+#             */
-/*   Updated: 2021/03/08 22:05:23 by tthibaut         ###   ########.fr       */
+/*   Updated: 2021/03/09 10:29:48 by tthibaut         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_splitstrlcpy(char *dst, const char *src, size_t size)
+size_t			ft_splitstrlcpy(char *dst, const char *src, size_t size)
 {
 	size_t i;
 
@@ -26,7 +26,7 @@ size_t		ft_splitstrlcpy(char *dst, const char *src, size_t size)
 	return (i);
 }
 
-size_t		ft_count_words(char const *s, char c)
+size_t			ft_count_words(char const *s, char c)
 {
 	size_t	i;
 
@@ -53,21 +53,21 @@ size_t		ft_count_words(char const *s, char c)
 	return (i);
 }
 
-static char             **ft_free(char const **tab, size_t j)
+static char		**ft_free(char const **tab, size_t j)
 {
-        size_t  i;
+	size_t	i;
 
-        i = 0;
-        while (i < j)
-        {
-                free((void *)tab[i]);
-                i++;
-        }
-        free(tab);
-        return (0);
+	i = 0;
+	while (i < j)
+	{
+		free((void *)tab[i]);
+		i++;
+	}
+	free(tab);
+	return (0);
 }
 
-char		**ft_fill_row(char **dst, char const *src, char c)
+char			**ft_fill_row(char **dst, char const *src, char c)
 {
 	size_t	j;
 	size_t	k;
@@ -96,7 +96,7 @@ char		**ft_fill_row(char **dst, char const *src, char c)
 	return (dst);
 }
 
-char		**ft_split(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
 	char	**str;
 	size_t	i;
