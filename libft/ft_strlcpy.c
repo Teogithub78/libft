@@ -6,7 +6,7 @@
 /*   By: tthibaut <tthibaut@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 10:41:17 by tthibaut          #+#    #+#             */
-/*   Updated: 2021/03/07 23:58:05 by tthibaut         ###   ########.fr       */
+/*   Updated: 2021/03/09 11:16:47 by tthibaut         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 			i++;
 		return (i);
 	}
+	if (dst == 0 && src == 0)
+		return (0);
 	while (i < (size - 1) && src[i])
 	{
 		dst[i] = src[i];
